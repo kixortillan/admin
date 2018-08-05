@@ -1,0 +1,17 @@
+{
+  "name": "api-admin",
+  "version": "0.0.1",
+  "description": "Rest API for admin web application.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mortillan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "google-auth-library": "^1.6.1",
+    "helmet": "^3.13.0",
+    "mongoose": "^5.2.6"
+  }
+}
