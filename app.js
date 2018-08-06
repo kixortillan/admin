@@ -7,8 +7,12 @@ const app = express();
 
 app.use(helmet());
 
-require('./lib/storage/db')('mongodb://localhost:27017/admin', { useNewUrlParser: true });
+const dbConfig = require('./config/mongodb'); 
+const connectionString = `mongodb+srv://${dbConfig.user}:${dbConfig.password}@admin-awyqb.mongodb.net/${dbConfig.database}?retryWrites=true`;
 
-// app.use('/users', require('./routes/users'));
+const db = require('./lib/storage/db');
+db(connectionString, { useNewUrlParser: true });
+
+app.use('/users', require('./routes/users'));
 
 app.listen(3000, () => console.log('Http server started at port 3000...'));
