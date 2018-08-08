@@ -4,14 +4,21 @@
   "description": "Rest API for admin web application.",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "mortillan",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.4",
     "express": "^4.16.3",
     "google-auth-library": "^1.6.1",
+    "googleapis": "^32.0.0",
     "helmet": "^3.13.0",
     "mongoose": "^5.2.6"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.3"
   }
 }

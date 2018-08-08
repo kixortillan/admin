@@ -4,7 +4,7 @@ const { Router } = require('express');
 const { google } = require('googleapis');
 const router = Router();
 
-router.get('/', (req, res) => {
+router.get('/google', (req, res) => {
 
   const client = new google.auth.OAuth2(
     '568097666308-5slbremnc6o703h7rjsidtluot37acck.apps.googleusercontent.com',
