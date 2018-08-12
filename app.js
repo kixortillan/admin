@@ -16,5 +16,6 @@ const db = require('./lib/storage/db');
 db(connectionString, { useNewUrlParser: true });
 
 app.use('/auth', require('./routes/auth'));
+app.use('/users', require('./routes/users'));
 
 app.listen(3001, () => console.log('Http server started at port 3001...'));
